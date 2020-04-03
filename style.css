@@ -1,0 +1,190 @@
+
+
+/* *****************************************
+********this code by  :LACHACHI ************
+********************************************/
+
+
+
+/* reset value */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(238, 238, 238);
+}
+
+
+
+/* THIS IS FACE **************/
+
+.face{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background: #ffcc03;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 110px #333;
+    border: 1px solid rgb(14, 14 , 14, 20%);
+}
+
+
+
+
+
+.face:hover{
+    background: yellow;
+    box-shadow: 0 0 90px rgb(255,253 ,108);
+}
+
+
+/* MOUTH *****************************/
+
+.foom{
+    content: '';
+    position: absolute;
+    top:220px;
+    width: 115px;
+    height: 30px;
+    background:transparent;
+    border-top-left-radius: 70%;
+    border-top-right-radius: 70%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 -25px 0 3px coral;
+
+    transition: 0.1s;
+}
+
+.face:hover .foom{
+   background: coral; 
+   width: 150px;
+   height: 70px;
+   top: 180px;
+   border-top-left-radius: 0%;
+   border-top-right-radius: 0%;
+   border-bottom-left-radius: 70px;
+   border-bottom-right-radius: 70px;
+   box-shadow: none;
+} 
+
+/* EYES *************************/
+
+.eyes{
+    position: relative;
+    top: 0;
+    display: flex;
+}
+
+.eyes .eye{
+    display: block;
+    position: relative;
+    top: -33px;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    margin: 0 15px;
+    border-radius: 50%;
+    border: 1px solid rgb(14, 14 , 14, 20%);
+}
+
+.eyes .eye::before{
+    content: '';
+    width: 30px;
+    height: 35px;
+    background:#333;
+    position: absolute;
+    top: 60%;
+    left: 24px;
+    border-radius: 50%;
+    transition: 0.1s;
+}
+
+.face:hover .eye::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    top: 15%;
+    position: absolute;
+    left: 15px;
+}
+
+.face:hover .eyes::after{
+    content: '';
+    width: 12px;
+    height: 8px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: -7%;
+    left: 35px;
+    box-shadow: 110px 0 0 white;
+}
+
+
+/* WHY SAD? ********************/
+
+.face::after{
+    content: 'WHY SAD ?';
+    color : black;
+    position: absolute;
+    top: -25%;
+    font-style: bold;
+    font-size: 20px;
+    font-family: 'Comic Neue', cursive;
+    transition: 0.2s;
+
+}
+
+/* BE HAPPY ******************/
+.face:hover::after{
+    content: 'BE HAPPY !';
+    top: -30%;
+    font-size: 30px;
+    transition: 0.2s;
+}
+
+/* CRYINGGG ******************/
+
+.dam3a{
+    content: '';
+    width: 20px;
+    height: 30px;
+    background-color: rgb(38, 132, 255);
+    position: absolute;
+    top: 52%;
+    left: 215px;
+    border-top-left-radius: 1000%;
+    border-top-right-radius: 1000%;
+    border-bottom-left-radius: 170px;
+    border-bottom-right-radius: 170px;
+}
+.face:hover .dam3a{
+    opacity: 0;
+    top: 10%;
+    transition: 0.5;
+}
+
+/* SHADOW ********************/
+.Shadow{
+    z-index: -1;
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    border-radius: 50%;
+    background:transparent;
+    justify-content: center;
+    align-items: center;
+    top:280px;
+
+    box-shadow: 0 230px 30px #000;
+}
